@@ -5,7 +5,7 @@ import {setupServer} from 'msw/node'
 import {handlers} from './test/server-handlers'
 
 // set the location to the /list route as we auto-redirect users to that route
-window.history.pushState({}, 'Home page', '/list')
+window.history.pushState({}, 'Home page', '/discover')
 
 // speeds up *ByRole queries a bit
 // https://github.com/testing-library/dom-testing-library/issues/552
