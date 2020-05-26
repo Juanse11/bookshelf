@@ -54,16 +54,6 @@ async function loginAsUser(user = buildUser()) {
   return user
 }
 
-// TODO: open an issue on DOM Testing Library to make this built-in...
-async function waitForElementToBeRemoved(...args) {
-  try {
-    await rtl.waitForElementToBeRemoved(...args)
-  } catch (error) {
-    screen.debug()
-    throw error
-  }
-}
-
 function waitForLoadingToFinish() {
   return waitFor(
     () => {
@@ -87,11 +77,4 @@ function getRandomBook() {
 }
 
 export * from '@testing-library/react'
-export {
-  render,
-  userEvent,
-  loginAsUser,
-  waitForElementToBeRemoved,
-  waitForLoadingToFinish,
-  getRandomBook,
-}
+export {render, userEvent, loginAsUser, waitForLoadingToFinish, getRandomBook}
